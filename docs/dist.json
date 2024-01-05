@@ -1,0 +1,265 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PuppyLove2.0_Backend",
+    "description": "API Documentation for PuppyLove2.0_Backend [Github](https://github.com/pclubiitk/puppylove2.0_backend)",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://pclub.in/"
+    },
+    "x-logo": {
+      "url": "https://pclub.in/images/pclub.png"
+    }
+  },
+  "tags": [
+    {
+      "name": "Session",
+      "description": "Endpoints for Session Login and Logout."
+    },
+    {
+      "name": "User",
+      "description": "Endpoints for Users."
+    },
+    {
+      "name": "Admin",
+      "description": "Endpoints for Admin Use."
+    },
+    {
+      "name": "Fetch",
+      "description": "Endpoints for Fetching Tabular Data Fields for all users."
+    },
+    {
+      "name": "Send",
+      "description": "Endpoints for user to insert data in DB."
+    },
+    {
+      "name": "Verify",
+      "description": "Enpoints for user to verify claims about data in DB."
+    }
+  ],
+  "paths": {
+    "/users/mail:id": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Mail Authentication Code",
+        "description": "Receive the exact message you've sent",
+        "operationId": "mail"
+      }
+    },
+    "/users/login/first": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Register User",
+        "description": "Receive the exact message you've sent",
+        "operationId": "register"
+      }
+    },
+    "/session/login": {
+      "post": {
+        "tags": [
+          "User",
+          "Session"
+        ],
+        "summary": "User Login",
+        "description": "Receive the exact message you've sent",
+        "operationId": "userLogin"
+      }
+    },
+    "/session/logout": {
+      "get": {
+        "tags": [
+          "User",
+          "Session",
+          "Admin"
+        ],
+        "summary": "Logout",
+        "description": "Receive the exact message you've sent",
+        "operationId": "Logout"
+      }
+    },
+    "/session/admin/login": {
+      "post": {
+        "tags": [
+          "Admin",
+          "Session"
+        ],
+        "summary": "Admin Login",
+        "description": "Receive the exact message you've sent",
+        "operationId": "adminLogin"
+      }
+    },
+    "/admin/user/deleteallusers": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Delete All Users",
+        "description": "Receive the exact message you've sent",
+        "operationId": "deleteAll"
+      }
+    },
+    "/admin/user/new": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Add New Users",
+        "description": "Receive the exact message you've sent",
+        "operationId": "newUsers"
+      }
+    },
+    "/admin/user/delete": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Delete User",
+        "description": "Receive the exact message you've sent",
+        "operationId": "delete"
+      }
+    },
+    "/admin/publish": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Publish Results",
+        "description": "Receive the exact message you've sent",
+        "operationId": "publish"
+      }
+    },
+    "/users/activeusers": {
+      "get": {
+        "tags": [
+          "User",
+          "Fetch"
+        ],
+        "summary": "Fetch All Active Users",
+        "description": "Receive the exact message you've sent",
+        "operationId": "activeUsers"
+      }
+    },
+    "/users/fetchPublicKeys": {
+      "get": {
+        "tags": [
+          "User",
+          "Fetch"
+        ],
+        "summary": "Fetch Public Keys",
+        "description": "Receive the exact message you've sent",
+        "operationId": "fetchKeys"
+      }
+    },
+    "/users/fetchall": {
+      "get": {
+        "tags": [
+          "User",
+          "Fetch"
+        ],
+        "summary": "Fetch send_hearts Table",
+        "description": "Receive the exact message you've sent",
+        "operationId": "fetchAll"
+      }
+    },
+    "/users/fetchReturnHearts": {
+      "get": {
+        "tags": [
+          "User",
+          "Fetch"
+        ],
+        "summary": "Fetch return_hearts Table",
+        "description": "Receive the exact message you've sent",
+        "operationId": "fetchReturnHearts"
+      }
+    },
+    "/users/sendheartVirtual": {
+      "post": {
+        "tags": [
+          "User",
+          "Send"
+        ],
+        "summary": "Save User Selections",
+        "description": "Receive the exact message you've sent",
+        "operationId": "sendHeartsVirtual"
+      }
+    },
+    "/users/sendheart": {
+      "post": {
+        "tags": [
+          "User",
+          "Send"
+        ],
+        "summary": "Send Hearts",
+        "description": "Receive the exact message you've sent",
+        "operationId": "sendHearts"
+      }
+    },
+    "/users/claimheart": {
+      "post": {
+        "tags": [
+          "User",
+          "Verify"
+        ],
+        "summary": "Claim from send_hearts Table",
+        "description": "Receive the exact message you've sent",
+        "operationId": "claimHeart"
+      }
+    },
+    "/users/verifyreturnhearts": {
+      "post": {
+        "tags": [
+          "User",
+          "Verify"
+        ],
+        "summary": "Matching",
+        "description": "Receive the exact message you've sent",
+        "operationId": "matching"
+      }
+    },
+    "/users/sentHeartDecoded": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Gender Wise Heart Count",
+        "description": "Receive the exact message you've sent",
+        "operationId": "heartCount"
+      }
+    },
+    "/users/special/returnclaimedheartlate": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Returning claim in return_hearts Table",
+        "description": "Receive the exact message you've sent",
+        "operationId": "late"
+      }
+    },
+    "/users/publish": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "User Permission to Publish his/her result",
+        "description": "Receive the exact message you've sent",
+        "operationId": "permisssion"
+      }
+    },
+    "/users/mymatches": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Matching Results",
+        "description": "Receive the exact message you've sent",
+        "operationId": "results"
+      }
+    }
+  },
+  "components": {}
+}
