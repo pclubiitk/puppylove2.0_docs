@@ -1,0 +1,6 @@
+post:
+  tags:
+    - User
+  summary: Mail Authentication Code
+  description: Receive the exact message you've sent
+  operationId: mail

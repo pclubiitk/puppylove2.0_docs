@@ -1,0 +1,7 @@
+get:
+  tags:
+    - User
+    - Fetch
+  summary: Fetch send_hearts Table
+  description: Receive the exact message you've sent
+  operationId: fetchAll

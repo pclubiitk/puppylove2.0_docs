@@ -1,0 +1,6 @@
+post:
+  tags:
+    - User
+  summary: Register User
+  description: Receive the exact message you've sent
+  operationId: register

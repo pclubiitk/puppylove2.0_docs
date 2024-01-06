@@ -1,0 +1,7 @@
+post:
+  tags:
+    - User
+    - Send
+  summary: Send Hearts
+  description: Receive the exact message you've sent
+  operationId: sendHearts

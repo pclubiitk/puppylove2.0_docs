@@ -1,0 +1,6 @@
+post:
+  tags:
+    - User
+  summary: Gender Wise Heart Count
+  description: Receive the exact message you've sent
+  operationId: heartCount

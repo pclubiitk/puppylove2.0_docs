@@ -1,0 +1,7 @@
+post:
+  tags:
+    - User
+    - Verify
+  summary: Matching
+  description: Receive the exact message you've sent
+  operationId: matching

@@ -1,0 +1,7 @@
+post:
+  tags:
+    - User
+    - Session
+  summary: User Login
+  description: Receive the exact message you've sent
+  operationId: userLogin

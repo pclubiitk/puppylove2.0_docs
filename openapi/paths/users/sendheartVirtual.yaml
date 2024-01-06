@@ -1,0 +1,7 @@
+post:
+  tags:
+    - User
+    - Send
+  summary: Save User Selections
+  description: Receive the exact message you've sent
+  operationId: sendHeartsVirtual

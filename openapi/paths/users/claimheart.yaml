@@ -1,0 +1,7 @@
+post:
+  tags:
+    - User
+    - Verify
+  summary: Claim from send_hearts Table
+  description: Receive the exact message you've sent
+  operationId: claimHeart

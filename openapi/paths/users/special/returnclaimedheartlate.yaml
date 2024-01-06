@@ -1,0 +1,6 @@
+post:
+  tags:
+    - User
+  summary: Returning claim in return_hearts Table
+  description: Receive the exact message you've sent
+  operationId: late

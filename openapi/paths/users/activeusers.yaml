@@ -1,0 +1,7 @@
+get:
+  tags:
+    - User
+    - Fetch
+  summary: Fetch All Active Users
+  description: Receive the exact message you've sent
+  operationId: activeUsers

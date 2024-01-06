@@ -1,0 +1,7 @@
+get:
+  tags:
+    - User
+    - Fetch
+  summary: Fetch Public Keys
+  description: Receive the exact message you've sent
+  operationId: fetchKeys

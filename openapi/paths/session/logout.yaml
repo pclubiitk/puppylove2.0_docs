@@ -1,0 +1,8 @@
+get:
+  tags:
+    - User
+    - Session
+    - Admin
+  summary: Logout
+  description: Receive the exact message you've sent
+  operationId: Logout

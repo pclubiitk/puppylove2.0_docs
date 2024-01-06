@@ -1,80 +1,66 @@
 openapi: 3.1.0
 info:
+  title: PuppyLove2.0_Backend
+  description: API Documentation for PuppyLove2.0_Backend [Github](https://github.com/pclubiitk/puppylove2.0_backend)
   version: 1.0.0
-  title: Example.com
-  termsOfService: https://example.com/terms/
   contact:
-    email: contact@example.com
-    url: http://example.com/contact
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    url: https://pclub.in/
   x-logo:
-    url: https://redocly.github.io/openapi-template/logo.png
-  description: >
-    This is an **example** API to demonstrate features of the OpenAPI
-    specification.
+    url: https://pclub.in/images/pclub.png
 
-    # Introduction
-
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
-
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-    the standard OpenAPI syntax, we use a few 
-    [vendor extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
-
-    # OpenAPI Specification
-
-    The goal of The OpenAPI Specification is to define a standard, language-agnostic interface to REST APIs which
-    allows both humans and computers to discover and understand the capabilities
-    of the service without access to source
-    code, documentation, or through network traffic inspection. When properly
-    defined via OpenAPI, a consumer can 
-    understand and interact with the remote service with a minimal amount of
-    implementation logic. Similar to what
-    interfaces have done for lower-level programming, OpenAPI removes the
-    guesswork in calling the service.
 tags:
-  - name: Echo
-    description: Example echo operations.
+  - name: Session
+    description: Endpoints for Session Login and Logout.
   - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
-servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://example.com/api/v1
+    description: Endpoints for Users.
+  - name: Admin
+    description: Endpoints for Admin Use.
+  - name: Fetch
+    description: Endpoints for Fetching Tabular Data Fields for all users.
+  - name: Send
+    description: Endpoints for user to insert data in DB.
+  - name: Verify
+    description: Enpoints for user to verify claims about data in DB.
 paths:
-  /users/{username}:
-    $ref: paths/users_{username}.yaml
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
-components:
-  securitySchemes:
-    main_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
-          scopes:
-            read:users: read users info
-            write:users: modify or remove users
-    api_key:
-      type: apiKey
-      in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+  /users/mail:id:
+    $ref: paths/users/mail:id.yaml
+  /users/login/first:
+    $ref: paths/users/login/first.yaml
+  /session/login:
+    $ref: paths/session/login.yaml
+  /session/logout:
+    $ref: paths/session/logout.yaml
+  /session/admin/login:
+    $ref: paths/session/admin/login.yaml
+  /admin/user/deleteallusers:
+    $ref: paths/admin/user/deleteallusers.yaml
+  /admin/user/new:
+    $ref: paths/admin/user/new.yaml
+  /admin/user/delete:
+    $ref: paths/admin/user/delete.yaml
+  /admin/publish:
+    $ref: paths/admin/publish.yaml
+  /users/activeusers:
+    $ref: paths/users/activeusers.yaml
+  /users/fetchPublicKeys:
+    $ref: paths/users/fetchPublicKeys.yaml
+  /users/fetchall:
+    $ref: paths/users/fetchall.yaml
+  /users/fetchReturnHearts:
+    $ref: paths/users/fetchReturnHearts.yaml
+  /users/sendheartVirtual:
+    $ref: paths/users/sendheartVirtual.yaml
+  /users/sendheart:
+    $ref: paths/users/sendheart.yaml
+  /users/claimheart:
+    $ref: paths/users/claimheart.yaml
+  /users/verifyreturnhearts:
+    $ref: paths/users/verifyreturnhearts.yaml
+  /users/sentHeartDecoded:
+    $ref: paths/users/sentHeartDecoded.yaml
+  /users/special/returnclaimedheartlate:
+    $ref: paths/users/special/returnclaimedheartlate.yaml
+  /users/publish:
+    $ref: paths/users/publish.yaml
+  /users/mymatches:
+    $ref: paths/users/mymatches.yaml

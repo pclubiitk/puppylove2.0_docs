@@ -1,0 +1,6 @@
+get:
+  tags:
+    - User
+  summary: Matching Results
+  description: Receive the exact message you've sent
+  operationId: results

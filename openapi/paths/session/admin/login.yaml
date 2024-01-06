@@ -1,0 +1,7 @@
+post:
+  tags:
+    - Admin
+    - Session
+  summary: Admin Login
+  description: Receive the exact message you've sent
+  operationId: adminLogin

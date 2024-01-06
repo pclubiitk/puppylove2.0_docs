@@ -1,0 +1,6 @@
+get:
+  tags:
+    - Admin
+  summary: Publish Results
+  description: Receive the exact message you've sent
+  operationId: publish
