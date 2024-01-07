@@ -58,7 +58,7 @@ paths:
     $ref: paths/users/verifyreturnhearts.yaml
   /users/sentHeartDecoded:
     $ref: paths/users/sentHeartDecoded.yaml
-  /users/special/returnclaimedheartlate:
+  /special/returnclaimedheartlate:
     $ref: paths/users/special/returnclaimedheartlate.yaml
   /users/publish:
     $ref: paths/users/publish.yaml

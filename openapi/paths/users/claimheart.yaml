@@ -5,3 +5,19 @@ post:
   summary: Claim from send_hearts Table
   description: Receive the exact message you've sent
   operationId: claimHeart
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            enc:
+              type: string
+            sha:
+              type: string
+            genderOfSender:
+              type: string
+  responses:
+    $ref: ../../components/responses/response.yaml

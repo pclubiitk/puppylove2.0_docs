@@ -1,0 +1,29 @@
+type: object
+properties:
+  genderofsender:
+    type: string
+  enc1:
+    type: string
+  sha1:
+    type: string
+  enc2:
+    type: string
+  sha2:
+    type: string
+  enc3:
+    type: string
+  sha3:
+    type: string
+  enc4:
+    type: string
+  sha4:
+    type: string
+  returnhearts:
+    type: array
+    items:
+      type: object
+      properties:
+        enc:
+          type: string
+        sha:
+          type: string

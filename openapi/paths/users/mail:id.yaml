@@ -4,3 +4,13 @@ post:
   summary: Mail Authentication Code
   description: Receive the exact message you've sent
   operationId: mail
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties: {}
+  responses:
+    $ref: ../../components/responses/response.yaml

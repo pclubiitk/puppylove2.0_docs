@@ -4,3 +4,21 @@ post:
   summary: Delete User
   description: Receive the exact message you've sent
   operationId: delete
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            roll:
+              type: string
+            name:
+              type: string
+            email:
+              type: string
+            gender:
+              type: string
+  responses:
+    $ref: ../../../components/responses/response.yaml

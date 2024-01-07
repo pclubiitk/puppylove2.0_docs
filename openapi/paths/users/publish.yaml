@@ -4,3 +4,13 @@ post:
   summary: User Permission to Publish his/her result
   description: Receive the exact message you've sent
   operationId: permisssion
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties: {}
+  responses:
+    $ref: ../../components/responses/response.yaml

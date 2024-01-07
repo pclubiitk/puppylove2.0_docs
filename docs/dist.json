@@ -45,7 +45,30 @@
         ],
         "summary": "Mail Authentication Code",
         "description": "Receive the exact message you've sent",
-        "operationId": "mail"
+        "operationId": "mail",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/login/first": {
@@ -55,7 +78,29 @@
         ],
         "summary": "Register User",
         "description": "Receive the exact message you've sent",
-        "operationId": "register"
+        "operationId": "register",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/first"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/session/login": {
@@ -66,7 +111,37 @@
         ],
         "summary": "User Login",
         "description": "Receive the exact message you've sent",
-        "operationId": "userLogin"
+        "operationId": "userLogin",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "passHash": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/session/logout": {
@@ -89,7 +164,37 @@
         ],
         "summary": "Admin Login",
         "description": "Receive the exact message you've sent",
-        "operationId": "adminLogin"
+        "operationId": "adminLogin",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "pass": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/admin/user/deleteallusers": {
@@ -109,7 +214,29 @@
         ],
         "summary": "Add New Users",
         "description": "Receive the exact message you've sent",
-        "operationId": "newUsers"
+        "operationId": "newUsers",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/new"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/admin/user/delete": {
@@ -119,7 +246,43 @@
         ],
         "summary": "Delete User",
         "description": "Receive the exact message you've sent",
-        "operationId": "delete"
+        "operationId": "delete",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "roll": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "gender": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/admin/publish": {
@@ -184,7 +347,29 @@
         ],
         "summary": "Save User Selections",
         "description": "Receive the exact message you've sent",
-        "operationId": "sendHeartsVirtual"
+        "operationId": "sendHeartsVirtual",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/sendheartVirtual"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/sendheart": {
@@ -195,7 +380,29 @@
         ],
         "summary": "Send Hearts",
         "description": "Receive the exact message you've sent",
-        "operationId": "sendHearts"
+        "operationId": "sendHearts",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/sendheart"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/claimheart": {
@@ -206,7 +413,40 @@
         ],
         "summary": "Claim from send_hearts Table",
         "description": "Receive the exact message you've sent",
-        "operationId": "claimHeart"
+        "operationId": "claimHeart",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "genderOfSender": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/verifyreturnhearts": {
@@ -217,7 +457,37 @@
         ],
         "summary": "Matching",
         "description": "Receive the exact message you've sent",
-        "operationId": "matching"
+        "operationId": "matching",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "secret": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/sentHeartDecoded": {
@@ -227,17 +497,93 @@
         ],
         "summary": "Gender Wise Heart Count",
         "description": "Receive the exact message you've sent",
-        "operationId": "heartCount"
+        "operationId": "heartCount",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "decodedHearts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "enc": {
+                          "type": "string"
+                        },
+                        "genderOfSender": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
-    "/users/special/returnclaimedheartlate": {
+    "/special/returnclaimedheartlate": {
       "post": {
         "tags": [
           "User"
         ],
         "summary": "Returning claim in return_hearts Table",
         "description": "Receive the exact message you've sent",
-        "operationId": "late"
+        "operationId": "late",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "returnhearts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "enc": {
+                          "type": "string"
+                        },
+                        "sha": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/publish": {
@@ -247,7 +593,30 @@
         ],
         "summary": "User Permission to Publish his/her result",
         "description": "Receive the exact message you've sent",
-        "operationId": "permisssion"
+        "operationId": "permisssion",
+        "requestBody": {
+          "description": null,
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/users/mymatches": {
@@ -261,5 +630,174 @@
       }
     }
   },
-  "components": {}
+  "components": {
+    "schemas": {
+      "first": {
+        "type": "object",
+        "properties": {
+          "roll": {
+            "type": "string"
+          },
+          "authCode": {
+            "type": "string"
+          },
+          "passHash": {
+            "type": "string"
+          },
+          "pubKey": {
+            "type": "string"
+          },
+          "privKey": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string",
+            "enum": [
+              "FIRST_LOGIN"
+            ]
+          }
+        }
+      },
+      "new": {
+        "type": "object",
+        "properties": {
+          "newuser": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "roll": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "passHash": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "sendheartVirtual": {
+        "type": "object",
+        "properties": {
+          "hearts": {
+            "type": "object",
+            "properties": {
+              "heart1": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "id_encrypt": {
+                    "type": "string"
+                  }
+                }
+              },
+              "heart2": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "id_encrypt": {
+                    "type": "string"
+                  }
+                }
+              },
+              "heart3": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "id_encrypt": {
+                    "type": "string"
+                  }
+                }
+              },
+              "heart4": {
+                "type": "object",
+                "properties": {
+                  "enc": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "id_encrypt": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "sendheart": {
+        "type": "object",
+        "properties": {
+          "genderofsender": {
+            "type": "string"
+          },
+          "enc1": {
+            "type": "string"
+          },
+          "sha1": {
+            "type": "string"
+          },
+          "enc2": {
+            "type": "string"
+          },
+          "sha2": {
+            "type": "string"
+          },
+          "enc3": {
+            "type": "string"
+          },
+          "sha3": {
+            "type": "string"
+          },
+          "enc4": {
+            "type": "string"
+          },
+          "sha4": {
+            "type": "string"
+          },
+          "returnhearts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "enc": {
+                  "type": "string"
+                },
+                "sha": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

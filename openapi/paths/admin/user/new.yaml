@@ -4,3 +4,12 @@ post:
   summary: Add New Users
   description: Receive the exact message you've sent
   operationId: newUsers
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/admin/user/new.yaml
+  responses:
+    $ref: ../../../components/responses/response.yaml

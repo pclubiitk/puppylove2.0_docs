@@ -5,3 +5,17 @@ post:
   summary: User Login
   description: Receive the exact message you've sent
   operationId: userLogin
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            _id:
+              type: string
+            passHash:
+              type: string
+  responses:
+    $ref: ../../components/responses/response.yaml

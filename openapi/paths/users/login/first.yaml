@@ -4,3 +4,12 @@ post:
   summary: Register User
   description: Receive the exact message you've sent
   operationId: register
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          $ref: ../../../components/schemas/users/login/first.yaml
+  responses:
+    $ref: ../../../components/responses/response.yaml

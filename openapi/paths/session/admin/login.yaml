@@ -5,3 +5,17 @@ post:
   summary: Admin Login
   description: Receive the exact message you've sent
   operationId: adminLogin
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: string
+            pass:
+              type: string
+  responses:
+    $ref: ../../../components/responses/response.yaml

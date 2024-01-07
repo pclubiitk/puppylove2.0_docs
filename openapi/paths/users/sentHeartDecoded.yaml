@@ -4,3 +4,22 @@ post:
   summary: Gender Wise Heart Count
   description: Receive the exact message you've sent
   operationId: heartCount
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            decodedHearts:
+              type: array
+              items:
+                type: object
+                properties:
+                  enc:
+                    type: string
+                  genderOfSender:
+                    type: string
+  responses:
+    $ref: ../../components/responses/response.yaml

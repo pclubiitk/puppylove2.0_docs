@@ -1,0 +1,41 @@
+type: object
+properties:
+  hearts:
+    type: object
+    properties:
+      heart1:
+        type: object
+        properties:
+          enc:
+            type: string
+          sha:
+            type: string
+          id_encrypt:
+            type: string
+      heart2:
+        type: object
+        properties:
+          enc:
+            type: string
+          sha:
+            type: string
+          id_encrypt:
+            type: string
+      heart3:
+        type: object
+        properties:
+          enc:
+            type: string
+          sha:
+            type: string
+          id_encrypt:
+            type: string
+      heart4:
+        type: object
+        properties:
+          enc:
+            type: string
+          sha:
+            type: string
+          id_encrypt:
+            type: string

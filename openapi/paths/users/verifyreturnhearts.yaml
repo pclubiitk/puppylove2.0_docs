@@ -5,3 +5,17 @@ post:
   summary: Matching
   description: Receive the exact message you've sent
   operationId: matching
+  requestBody:
+    description:
+    required: true 
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            enc:
+              type: string
+            secret:
+              type: string
+  responses:
+    $ref: ../../components/responses/response.yaml

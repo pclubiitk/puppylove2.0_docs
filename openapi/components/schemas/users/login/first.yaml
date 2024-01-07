@@ -1,0 +1,16 @@
+type: object
+properties:
+  roll:
+    type: string
+  authCode:
+    type: string
+  passHash:
+    type: string
+  pubKey:
+    type: string
+  privKey:
+    type: string
+  data:
+    type: string
+    enum:
+      - FIRST_LOGIN

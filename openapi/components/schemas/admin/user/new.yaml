@@ -1,0 +1,17 @@
+type: object
+properties:
+  newuser:
+    type: array
+    items:
+      type: object
+      properties:
+        roll:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        gender:
+          type: string
+        passHash:
+          type: string
