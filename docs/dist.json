@@ -2,11 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "PuppyLove2.0_Backend",
-    "description": "API Documentation for PuppyLove2.0_Backend [Github](https://github.com/pclubiitk/puppylove2.0_backend)",
+    "description": "Programming Club is a community of IITK students who are highly enthusiastic about development, algorithms, security, ML, and all other aspects of programming.  \n**Contact**: [WEBSITE](https://pclub.in/) \n# Introduction\n**PuppyLove** is a Dating App exclusively for IITK Campus.  \nThis is an API Documentation for PuppyLove2.0_Backend [Github](https://github.com/pclubiitk/puppylove2.0_backend).  \n* Please note that this documentation does not offer direct API services but rather serves as a descriptive resource detailing the endpoints and their usage.  \n* If you're attempting to make requests to a live server or hosting your own instance of the PuppyLove2.0 application, please refer to this documentation for guide.\n# Getting Started\n* Explore the documentation to discover available endpoints and their usage.\n* Detailed JSON schemas are provided, outlining the structure required for both the data in POST requests and the expected formats for responses across all endpoints.\n* Endpoints are categorized into five sections based on their use case: Session, User, Admin, Fetch, Send, Verify. Note that an endpoint can belong to multiple sections.\n## Authentication\n* PuppyLove2.0 employs JWT (JSON Web Token) authentication.\n* During session login, a JWT is generated and sent back to the user via a cookie.\n* Subsequent requests require the inclusion of the JWT within the cookie header, which is authenticated by the Auth Middleware on server.\n* Each JWT remains valid for a single session only.\n* When using a web browser, the cookie header is managed automatically by the browser itself. However, for manual requests or when not using a browser-based environment, it's essential to retrieve the cookie from the login response. Subsequent requests must include this retrieved cookie within the headers to ensure proper authentication.\n",
     "version": "1.0.0",
-    "contact": {
-      "url": "https://pclub.in/"
-    },
     "x-logo": {
       "url": "https://pclub.in/images/pclub.png"
     }
